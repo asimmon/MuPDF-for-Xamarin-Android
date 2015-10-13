@@ -1,0 +1,4 @@
+<metadata>
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.AscendingDequeIterator']/method[@name='next']" name="return">Java.Lang.Object</attr>
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DescendingDequeIterator']/method[@name='next']" name="return">Java.Lang.Object</attr>
+</metadata>
