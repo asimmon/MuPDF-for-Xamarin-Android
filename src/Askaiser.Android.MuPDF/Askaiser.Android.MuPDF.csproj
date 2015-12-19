@@ -47,6 +47,8 @@
     <LibraryProjectZip Include="Transforms\mupdf.zip" />
     <EmbeddedNativeLibrary Include="libs\armeabi-v7a\libmupdf.so" />
     <EmbeddedNativeLibrary Include="libs\armeabi\libmupdf.so" />
+    <EmbeddedNativeLibrary Include="libs\mips\libmupdf.so" />
+    <EmbeddedNativeLibrary Include="libs\x86\libmupdf.so" />
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Transforms\Metadata.xml" />
