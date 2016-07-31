@@ -18,7 +18,7 @@
 	</attr>
 
 	<!--
-	`Artifex.MuPdf' is marked as an override but no suitable property found to override (CS0115)
+	`Artifex.MuPdf.Adapter' is marked as an override but no suitable property found to override (CS0115)
 	Removes Adapter { get; set; } and create SetAdapter(...) and GetAdapter()
 	If someone has a better way to create a C# getter/setter...
 	-->
