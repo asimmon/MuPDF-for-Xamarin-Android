@@ -1,6 +1,6 @@
 ﻿using Android.Runtime;
 
-namespace Com.Artifex.Mupdfdemo
+namespace Artifex.MuPdf
 {
     partial class ReaderView
     {

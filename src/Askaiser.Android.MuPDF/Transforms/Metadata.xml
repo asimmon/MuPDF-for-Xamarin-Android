@@ -27,4 +27,9 @@
 	
 	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.Adapter']]"
 		name="propertyName"></attr>
+
+	<!-- Normalize the namespace for .NET -->
+    <attr path="/api/package[@name='com.artifex.mupdfdemo']" name="managedName">
+		Artifex.MuPdf
+	</attr>
 </metadata>
