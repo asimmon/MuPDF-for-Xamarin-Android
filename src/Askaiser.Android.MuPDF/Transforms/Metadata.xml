@@ -1,4 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.AscendingDequeIterator']/method[@name='next']" name="return">Java.Lang.Object</attr>
-  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DescendingDequeIterator']/method[@name='next']" name="return">Java.Lang.Object</attr>
+	<!--
+	`Com.Artifex.Mupdfdemo.ArrayDeque.DeqIterator' does not implement interface member `Java.Util.IIterator.Next()' (CS0535)
+	There was a name conflict between the private member 'deqIterator' (DeqIterator after Xamarin conversion)
+	and the type 'DeqIteraror'. Renaming the private member solves the problem.
+	-->
+	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DeqIterator']" name="name">
+		AscendingDequeIterator
+	</attr>
+
+	<!--
+	If 'deqIterator' become 'AscendingDequeIterator' then we rename
+	'descendingIterator' -> 'DescendingDequeIterator'
+	-->
+	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DescendingIterator']" name="name">
+		DescendingDequeIterator
+	</attr>
+
+	<!--
+	`Com.Artifex.Mupdfdemo.ReaderView.Adapter' is marked as an override but no suitable property found to override (CS0115)
+	Removes Adapter { get; set; } and create SetAdapter(...) and GetAdapter()
+	If someone has a better way to create a C# getter/setter...
+	-->
+	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='getAdapter' and count(parameter)=0]"
+		name="propertyName"></attr>
+	
+	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.Adapter']]"
+		name="propertyName"></attr>
 </metadata>
