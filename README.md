@@ -33,47 +33,53 @@ From [mupdf.com](http://mupdf.com):
 
 Import the `Artifex.MuPdf` (previously `Com.Artifex.Mupdfdemo`) namespace to use these classes.
 
-	var pdf = new MuPDFCore(this, pdfFilepath);
-	var cookie = new MuPDFCore.Cookie(pdf);
-	var count = pdf.CountPages();
-	
-	var screenWidth = 768;
-	var screenHeight = 1280;
-	 
-	for (int i = 0; i < count; i++)
-	{
-	    var size = pdf.GetPageSize(i);
-	 
-	    int pageWidth = (int)size.X;
-	    int pageHeight = (int)size.Y;
-	 
-	    var bitmap = Bitmap.CreateBitmap(screenWidth, screenHeight, Bitmap.Config.Argb8888);
-	    pdf.DrawPage(bitmap, i, pageWidth, pageHeight, 0, 0, screenWidth, screenHeight, cookie);
-	 
-	    String filename = String.Format("/mnt/sdcard/pdf-{0}.png", i);
-	    using (var fos = new FileStream(filename, FileMode.Create, FileAccess.ReadWrite))
-	    {
-	        bitmap.Compress(Bitmap.CompressFormat.Png, 100, fos);
-	    }
-	}
+```C#
+var pdf = new MuPDFCore(this, pdfFilepath);
+var cookie = new MuPDFCore.Cookie(pdf);
+var count = pdf.CountPages();
+
+var screenWidth = 768;
+var screenHeight = 1280;
+ 
+for (int i = 0; i < count; i++)
+{
+    var size = pdf.GetPageSize(i);
+ 
+    int pageWidth = (int)size.X;
+    int pageHeight = (int)size.Y;
+ 
+    var bitmap = Bitmap.CreateBitmap(screenWidth, screenHeight, Bitmap.Config.Argb8888);
+    pdf.DrawPage(bitmap, i, pageWidth, pageHeight, 0, 0, screenWidth, screenHeight, cookie);
+ 
+    String filename = String.Format("/mnt/sdcard/pdf-{0}.png", i);
+    using (var fos = new FileStream(filename, FileMode.Create, FileAccess.ReadWrite))
+    {
+        bitmap.Compress(Bitmap.CompressFormat.Png, 100, fos);
+    }
+}
+```
 
 ## Using the MuPDFActivity viewer
 
 In order to use the bundled `MuPDFActivity`, you need to update your `AndroidManifest.xml` and declare the activity:
 
-	<!-- "com.artifex.mupdfdemo" is the original package name -->
-	<activity android:name="com.artifex.mupdfdemo.MuPDFActivity" />
+```XML
+<!-- "com.artifex.mupdfdemo" is the original package name -->
+<activity android:name="com.artifex.mupdfdemo.MuPDFActivity" />
+```
 
 For better performances, please enable hardware rendering by adding `android:hardwareAccelerated="true"` in the `<application>` XML node.
 
 Then, in your code, start the activity:
 
-	// pdfPath is the path of the PDF, for example /mnt/sdcard/test.pdf
-	var intent = new Intent(this, typeof(MuPDFActivity));
-	intent.SetAction(Intent.ActionView);
-	intent.SetData(Uri.Parse(pdfPath));
-	
-	StartActivity(intent);
+```C#
+// pdfPath is the path of the PDF, for example /mnt/sdcard/test.pdf
+var intent = new Intent(this, typeof(MuPDFActivity));
+intent.SetAction(Intent.ActionView);
+intent.SetData(Uri.Parse(pdfPath));
+
+StartActivity(intent);
+```
 
 ## More documentation and samples
 
