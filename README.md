@@ -93,3 +93,5 @@ This project is just a Xamarin Android binding of the original MuPDF, so if you 
 MuPDF is GNU AGPL licenced.
 
 MuPDF is Copyright 2006-2015 Artifex Software, Inc.
+
+I am not associated with either Artifex Software, Inc or Xamarin Inc. All rights belong to their respective owners.
