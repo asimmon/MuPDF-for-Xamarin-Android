@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>Askaiser.Android.MuPDF</id>
-    <version>1.3.0</version>
+    <version>1.18.0</version>
     <title>MuPDF for Xamarin Android</title>
     <authors>Anthony Simmon</authors>
     <owners>Anthony Simmon</owners>
-    <licenseUrl>https://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
-    <projectUrl>https://github.com/asimmon/Xamarin-Android-MuPDF-Port</projectUrl>
+    <license type="expression">AGPL-3.0-or-later</license>
+    <projectUrl>https://github.com/asimmon/MuPDF-for-Xamarin-Android</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A port of the MuPDF Android library for Xamarin Android. With this library, you will be able to read, write, update PDF files as well as convert pages to images.</description>
-    <copyright>Copyright 2016</copyright>
+    <copyright>Copyright 2020</copyright>
     <tags>xamarin android mupdf pdf reader writer jpg jpeg png gif</tags>
   </metadata>
   <files>

@@ -1,35 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<!--
-	`Com.Artifex.Mupdfdemo.ArrayDeque.DeqIterator' does not implement interface member `Java.Util.IIterator.Next()' (CS0535)
-	There was a name conflict between the private member 'deqIterator' (DeqIterator after Xamarin conversion)
-	and the type 'DeqIteraror'. Renaming the private member solves the problem.
-	-->
-	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DeqIterator']" name="name">
-		AscendingDequeIterator
-	</attr>
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']" name="managedName">
+    Artifex.MuPdf
+  </attr>
 
-	<!--
-	If 'deqIterator' become 'AscendingDequeIterator' then we rename
-	'descendingIterator' -> 'DescendingDequeIterator'
-	-->
-	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DescendingIterator']" name="name">
-		DescendingDequeIterator
-	</attr>
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz.android']" name="managedName">
+    Artifex.MuPdf
+  </attr>
 
-	<!--
-	`Artifex.MuPdf.Adapter' is marked as an override but no suitable property found to override (CS0115)
-	Removes Adapter { get; set; } and create SetAdapter(...) and GetAdapter()
-	If someone has a better way to create a C# getter/setter...
-	-->
-	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='getAdapter' and count(parameter)=0]"
-		name="propertyName"></attr>
-	
-	<attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.Adapter']]"
-		name="propertyName"></attr>
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='Matrix']/method[@name='Rotate' and count(parameter)=1 and parameter[1][@type='float']]" name="managedName">
+    RotateMatrix
+  </attr>
 
-	<!-- Normalize the namespace for .NET -->
-    <attr path="/api/package[@name='com.artifex.mupdfdemo']" name="managedName">
-		Artifex.MuPdf
-	</attr>
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='Matrix']/method[@name='Scale' and count(parameter)=1 and parameter[1][@type='float']]" name="managedName">
+    ScaleMatrix
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='Matrix']/method[@name='Scale' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]" name="managedName">
+    ScaleMatrix
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='Matrix']/method[@name='Translate' and count(parameter)=2 and parameter[1][@type='float'] and parameter[2][@type='float']]" name="managedName">
+    TranslateMatrix
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='Context.Version']/field[@name='version']" name="managedName">
+    VersionString
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='PDFObject.PDFObjectIterator']" name="name">
+    PDFObjectIteratorInternal
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='PDFWidget']/field[@name='TYPE_TEXT']" name="visibility">
+    public new
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='PDFWidget']/field[@name='TYPE_UNKNOWN']" name="visibility">
+    public new
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdf.fitz']/class[@name='PDFWidget']/method[@name='isReadOnly' and count(parameter)=0]" name="visibility">
+    public new
+  </attr>
 </metadata>
