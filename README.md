@@ -12,13 +12,11 @@ The [latest release](https://www.nuget.org/packages/Askaiser.Android.MuPDF/1.18.
 
 Quote from [mupdf.com](http://mupdf.com):
 
->>>
-The renderer in MuPDF is tailored for high quality anti-aliased graphics. It renders text with metrics and spacing accurate to within fractions of a pixel for the highest fidelity in reproducing the look of a printed page on screen.
-
-MuPDF is also small, fast, and yet complete. It supports PDF 1.7 with transparency, encryption, hyperlinks, annotations, searching and more. It also reads XPS and OpenXPS documents. MuPDF is written modularly, so features can be added on by integrators if they so desire.
-
-Since the 1.2 release of MuPDF, we have optional support for interactive features such as form filling, javascript and transitions.
->>>
+> The renderer in MuPDF is tailored for high quality anti-aliased graphics. It renders text with metrics and spacing accurate to within fractions of a pixel for the highest fidelity in reproducing the look of a printed page on screen.
+> 
+> MuPDF is also small, fast, and yet complete. It supports PDF 1.7 with transparency, encryption, hyperlinks, annotations, searching and more. It also reads XPS and OpenXPS documents. MuPDF is written modularly, so features can be added on by integrators if they so desire.
+> 
+> Since the 1.2 release of MuPDF, we have optional support for interactive features such as form filling, javascript and transitions.
 
 ## Get started
 
